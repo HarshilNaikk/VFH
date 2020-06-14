@@ -1,0 +1,6 @@
+<launch>
+     <node pkg="python_my_vfh" type="destinyAngle.py" name="destinyAngle"/>
+     <include file="$(find stdr_launchers)/launch/myLaunch2.launch"/>
+     <include file="$(find stdr_launchers)/launch/rviz.launch" />
+     <node pkg="python_my_vfh" type="vfh.py" name="VFH+"/>
+</launch>

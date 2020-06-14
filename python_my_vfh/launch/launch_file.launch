@@ -1,0 +1,6 @@
+<launch>
+     <include file="$(find stdr_launchers)/launch/server_with_map_and_gui_plus_robot.launch"/>
+     <node type="vfh.py" name="vfh.py" pkg="python_my_vfh"/>
+     <node type="rviz" name="rviz" pkg="rviz" args="-d $(find python_my_vfh)/rviz/defaul.rviz"/>
+     <node pkg="stdr_samples" type="stdr_obstacle_avoidance" name="stdr_samples_obstacle_avoidance"  args="robot0 laser_0"/>
+</launch>
